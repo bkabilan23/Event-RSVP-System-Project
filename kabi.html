@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Party RSVP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Holiday Party RSVP</h1>
+        <p>We hope you can make it to the party!</p>
+        <form action="submit.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="ex: myname@example.com" required>
+
+            <label for="attendance">Will you attend?</label>
+            <select id="attendance" name="attendance" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="guests">Number of guests:</label>
+            <input type="number" id="guests" name="guests" min="0" placeholder="ex: 23" required>
+
+            <label for="food">Food Preference:</label>
+            <textarea id="food" name="food" rows="4"></textarea>
+
+            <button type="submit">Submit RSVP</button>
+        </form>
+    </div>
+</body>
+</html>
