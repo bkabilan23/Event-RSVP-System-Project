@@ -1,0 +1,31 @@
+
+**`database/migrations/create_users_table.php`**
+```php
+Schema::create('users', function (Blueprint $table) {
+    $table->id();
+    $table->string('email')->unique();
+    $table->string('first_name');
+    $table->string('last_name');
+    $table->string('password');
+    $table->timestamps();
+});
+```
+
+**`database/migrations/create_events_table.php`**
+```php
+Schema::create('events', function (Blueprint $table) {
+    $table->id();
+    $table->string('name');
+    $table->timestamp('date');
+    $table->timestamps();
+});
+```
+
+**`database/migrations/create_event_rsvps_table.php`**
+```php
+Schema::create('event_rsvps', function (Blueprint $table) {
+    $table->id();
+    $table->foreignId('user_id')->constrained()->onDelete('cascade');
+    $table->foreignId('event_id')->constrained()->onDelete('cascade');
+    $table->timestamps();
+});
