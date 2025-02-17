@@ -1,0 +1,8 @@
+**`resources/views/events/index.blade.php`**
+```html
+@extends('layouts.app')
+
+@section('content')
+    <livewire:event-list />
+@endsection
+```
