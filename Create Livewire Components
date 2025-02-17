@@ -1,0 +1,5 @@
+Generate Livewire components:
+   ```bash
+   php artisan make:livewire EventList
+   php artisan make:livewire RsvpButton
+   php artisan make:livewire AttendeesList
