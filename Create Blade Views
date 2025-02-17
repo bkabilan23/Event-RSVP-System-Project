@@ -1,0 +1,34 @@
+**`resources/views/livewire/event-list.blade.php`**
+```html
+<div>
+    < h2>Upcoming Events</h2>
+    <ul>
+        @foreach($events as $event)
+            <li>
+                <h3>{{ $event->name }} ({{ $event->date }})</h3>
+                <livewire:rsvp-button :eventId="$event->id" />
+                <livewire:attendees-list :eventId="$event->id" />
+            </li>
+        @endforeach
+    </ul>
+</div>
+```
+
+**`resources/views/livewire/rsvp-button.blade.php`**
+```html
+<button wire:click="toggleRsvp" class="btn {{ $isRsvped ? 'btn-danger' : 'btn-primary' }}">
+    {{ $isRsvped ? 'Withdraw RSVP' : 'RSVP' }}
+</button>
+```
+
+**`resources/views/livewire/attendees-list.blade.php`**
+```html
+<div>
+    <h4>Attendees:</h4>
+    <ul>
+        @foreach($attendees as $attendee)
+            <li>{{ $attendee->user->first_name }} {{ $attendee->user->last_name }}</li>
+        @endforeach
+    </ul>
+</div>
+```
