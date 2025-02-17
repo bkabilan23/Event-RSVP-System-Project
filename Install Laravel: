@@ -1,0 +1,2 @@
+ composer create-project laravel/laravel event-rsvp-system
+   cd event-rsvp-system
