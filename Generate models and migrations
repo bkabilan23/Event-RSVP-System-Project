@@ -1,0 +1,4 @@
+ ```bash
+   php artisan make:model User -m
+   php artisan make:model Event -m
+   php artisan make:model EventRsvp -m
